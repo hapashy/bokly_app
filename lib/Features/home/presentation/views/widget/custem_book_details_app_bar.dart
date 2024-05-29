@@ -1,4 +1,6 @@
+import 'package:bokly_app/core/utils/app_roter.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CustemBookDetailsAppBar extends StatelessWidget {
   const CustemBookDetailsAppBar({super.key});
@@ -9,7 +11,9 @@ class CustemBookDetailsAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            GoRouter.of(context).push(AppRouter.kHomeView);
+          },
           icon: const Icon(Icons.close),
         ),
         IconButton(
