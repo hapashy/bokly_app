@@ -2,8 +2,8 @@ import 'package:bokly_app/Features/home/presentation/views/widget/book_rating.da
 import 'package:bokly_app/Features/home/presentation/views/widget/books_action.dart';
 import 'package:bokly_app/Features/home/presentation/views/widget/custem_book_details_app_bar.dart';
 import 'package:bokly_app/Features/home/presentation/views/widget/custom_book_item.dart';
+import 'package:bokly_app/Features/home/presentation/views/widget/similar_books_list_view.dart';
 import 'package:bokly_app/core/utils/styles.dart';
-import 'package:bokly_app/core/widgets/custom_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -16,7 +16,7 @@ class BookDetailsViewBody extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
             const CustemBookDetailsAppBar(),
@@ -54,6 +54,25 @@ class BookDetailsViewBody extends StatelessWidget {
               height: 37,
             ),
             const BooksAction(),
+            const SizedBox(
+              height: 50,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'You can also like',
+                style: Styles.style14normal.copyWith(
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            const SimilarBooksListView(),
+            const SizedBox(
+              height: 40,
+            ),
           ],
         ),
       ),
