@@ -4,16 +4,15 @@ import 'package:bokly_app/constants.dart';
 import 'package:bokly_app/core/utils/api_service.dart';
 import 'package:bokly_app/core/utils/functions/save_books.dart';
 
-
 abstract class HomeRemoteDataSource {
   Future<List<BookEntity>> fetchFeaturedBooks();
   Future<List<BookEntity>> fetchNewestBooks();
 }
 
-class HomeREmoteDataSourceImpl extends HomeRemoteDataSource {
+class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   final ApiService apiService;
 
-  HomeREmoteDataSourceImpl(this.apiService);
+  HomeRemoteDataSourceImpl(this.apiService);
 
   @override
   Future<List<BookEntity>> fetchFeaturedBooks() async {
