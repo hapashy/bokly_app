@@ -1,5 +1,5 @@
 import 'package:bokly_app/Features/home/data/models/book_model/book_model.dart';
-import 'package:bokly_app/Features/home/presentation/views/domain/entitys/book_entity.dart';
+import 'package:bokly_app/Features/home/domain/entitys/book_entity.dart';
 import 'package:bokly_app/constants.dart';
 import 'package:bokly_app/core/utils/api_service.dart';
 import 'package:bokly_app/core/utils/functions/save_books.dart';

@@ -1,7 +1,7 @@
 import 'package:bokly_app/Features/home/data/data_sources/home_local_data_source.dart';
 import 'package:bokly_app/Features/home/data/data_sources/home_remote_data_source.dart';
-import 'package:bokly_app/Features/home/presentation/views/domain/entitys/book_entity.dart';
-import 'package:bokly_app/Features/home/presentation/views/domain/repos/home_repo.dart';
+import 'package:bokly_app/Features/home/domain/entitys/book_entity.dart';
+import 'package:bokly_app/Features/home/domain/repos/home_repo.dart';
 import 'package:bokly_app/core/errors/failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
