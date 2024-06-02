@@ -15,7 +15,7 @@ class BookEntity {
   @HiveField(4)
   final num? price;
   @HiveField(5)
-  final num? rating;
+  final String? rating;
 
   BookEntity(
       {required this.image,
