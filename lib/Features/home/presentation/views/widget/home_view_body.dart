@@ -1,10 +1,10 @@
 import 'package:bokly_app/Features/home/presentation/views/widget/best_seller_list_view.dart';
+import 'package:bokly_app/Features/home/presentation/views/widget/featured_books_list_view_bloc_builder.dart';
 import 'package:bokly_app/core/utils/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'custom_app_bar.dart';
-import 'featured_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -21,7 +21,7 @@ class HomeViewBody extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: CustomAppBar(),
             ),
-            FeaturedBooksListView(),
+            FeaturedBooksListViewBlocBulider(),
             SizedBox(
               height: 50,
             ),
