@@ -1,5 +1,6 @@
 import 'package:bokly_app/Features/home/domain/entitys/book_entity.dart';
 import 'package:bokly_app/Features/home/presentation/manger/featured_books.cupit/featured_books_cubit.dart';
+import 'package:bokly_app/Features/home/presentation/views/widget/custom_book_image_loading_indicator.dart';
 import 'package:bokly_app/Features/home/presentation/views/widget/featured_list_view.dart';
 import 'package:bokly_app/core/utils/functions/build_error_snack_bar.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,8 @@ class _FeaturedBooksListViewBlocConsumerState
         ScaffoldMessenger.of(context).showSnackBar(buildErrorWidget(state.errMessage));
       }
     }, builder: (context, state) {
+
+      
       if (state is FeaturedBooksSuccess ||
           state is FeaturedBooksPaginationLoading ||
           state is FeaturedBooksPaginationFailure) {
@@ -39,7 +42,7 @@ class _FeaturedBooksListViewBlocConsumerState
       } else if (state is FeaturedBooksFailure) {
         return Text(state.errMassage);
       } else {
-        return const CircularProgressIndicator();
+        return const CustomBookImageLoadingIndicator();
       }
     });
   }
